@@ -26,7 +26,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Publish with dotnet
       run: dotnet publish 
-    - name: npm run build
-      run: npm run build
     - name: Test
       run: dotnet test --configuration Release
