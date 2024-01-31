@@ -27,9 +27,7 @@ jobs:
     - name: Publish with dotnet
       run: dotnet publish
     - name: Setup cdk
-      run: npm i -g aws-cdk   
-    - name: npm install
-      run: npm install
+      run: npm i -g aws-cdk  
     - name: npm run build
       run: npm run build
     - name: Test
