@@ -16,13 +16,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Setup .NET
+    - name: Setup .NET Core
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 6.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Build
+    - name: Build with dotnet
       run: dotnet build --no-restore
+    - name: Publish with dotnet
+      run: dotnet publish
+    - name: Setup cdk
+      run: npm i -g aws-cdk   
     - name: Test
       run: dotnet test --configuration Release
